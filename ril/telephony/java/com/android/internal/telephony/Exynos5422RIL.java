@@ -33,13 +33,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * RIL customization for Exynos3470 based devices.
+ * RIL customization for Exynos5422 based devices.
  * - Samsung Galaxy Light
- * - Samsung Galaxy S5 mini (G800F)
+ * - Samsung Galaxy S5 Exynos Varient (G900F)
  *
  * {@hide}
  */
-public class Exynos3470RIL extends RIL {
+public class Exynos5422RIL extends RIL {
 
     private static final int RIL_REQUEST_DIAL_EMERGENCY = 10016;
     private static final int RIL_UNSOL_STK_CALL_CONTROL_RESULT = 11003;
@@ -52,11 +52,11 @@ public class Exynos3470RIL extends RIL {
 
     private AudioManager mAudioManager;
 
-    public Exynos3470RIL(Context context, int networkMode, int cdmaSubscription) {
+    public Exynos5422RIL(Context context, int networkMode, int cdmaSubscription) {
         this(context, networkMode, cdmaSubscription, null);
     }
 
-    public Exynos3470RIL(Context context, int preferredNetworkType,
+    public Exynos5422RIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
         mAudioManager = (AudioManager)mContext.getSystemService(Context.AUDIO_SERVICE);

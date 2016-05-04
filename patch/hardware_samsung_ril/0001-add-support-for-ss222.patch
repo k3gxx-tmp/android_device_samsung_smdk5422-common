@@ -1,7 +1,7 @@
 From db14924888e126db8117c88f039ef9ae5257727d Mon Sep 17 00:00:00 2001
 From: CTXz <ctx.xda@gmail.com>
 Date: Fri, 11 Mar 2016 22:00:57 +0100
-Subject: [PATCH] ril: add support for ss222 (G800F/Y/M)
+Subject: [PATCH] ril: add support for ss222 (G900H)
 
 Change-Id: I818eb8169aa3f1e1a5a9ed47eb4e58b95dd23ea6
 ---
@@ -89,7 +89,7 @@ index 69a2f11..2c8e70b 100755
  LOCAL_CFLAGS += -DRIL_CALL_AUDIO_PATH_EXTRAVOLUME
  endif
 +
-+ifeq ($(TARGET_SOC),exynos3470)
++ifeq ($(TARGET_SOC),exynos5422)
 +LOCAL_CFLAGS += -DRIL_CALL_AUDIO_PATH_EXTRAVOLUME
 +endif
 +

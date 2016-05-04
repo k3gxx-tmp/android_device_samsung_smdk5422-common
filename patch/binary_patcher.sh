@@ -35,7 +35,7 @@ for device in kminilte degaslte; do
     # the functions of libion.so are erroneously used instead of the libion_exynos.so ones.
     # This causes crashes whenever the camera is used (in ion_alloc).
     # Solution: replace libion.so with liblog.so which is already referenced by the lib (-> no-op)
-    replace_all 'libion.so' 'liblog.so' ${VENDOR_DIR}/lib/hw/camera.universal3470.so
+    replace_all 'libion.so' 'liblog.so' ${VENDOR_DIR}/lib/hw/camera.universal5422.so
 
     # Signature changed from Lollipop:
     #   GraphicBufferMapper::lock(buffer_handle_t handle, int usage, const Rect& bounds, void** vaddr)

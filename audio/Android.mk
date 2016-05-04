@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_EXYNOS3_AUDIO_FROM_SOURCE),true)
+ifeq ($(TARGET_EXYNOS5_AUDIO_FROM_SOURCE),true)
 audio_dirs := source
 else
 audio_dirs := wrapper

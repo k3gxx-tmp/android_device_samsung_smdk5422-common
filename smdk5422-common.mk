@@ -16,28 +16,28 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-COMMON_PATH := device/samsung/smdk3470-common
+COMMON_PATH := device/samsung/smdk5422-common
 
 # Audio
 PRODUCT_PACKAGES := \
     audio.a2dp.default \
-    audio.primary.universal3470 \
+    audio.primary.universal5422 \
     audio.r_submix.default \
     audio.usb.default
 
 # Sound
 PRODUCT_PACKAGES += \
-    sound_trigger.primary.universal3470
+    sound_trigger.primary.universal5422
 
 # needed by open-source audio-hal
 PRODUCT_PACKAGES += \
     mixer_paths.xml
 
 # needed by stock audio-hal
-PRODUCT_PACKAGES += \
-    audio.vendor.universal3470 \
-    default_gain.conf \
-    tinyucm.conf
+#PRODUCT_PACKAGES += \
+#    audio.vendor.universal54 \
+#    default_gain.conf \
+#    tinyucm.conf
 
 # HW composer
 PRODUCT_PACKAGES += \
@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
     libsecril-client
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=Exynos3470RIL
+    ro.telephony.ril_class=Exynos5422RIL
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -108,7 +108,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # System properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.arch=exynos3470 \
+    ro.arch=exynos5422 \
     debug.hwui.render_dirty_regions=false \
     ro.opengles.version=131072 \
     ro.zygote.disable_gl_preload=true
