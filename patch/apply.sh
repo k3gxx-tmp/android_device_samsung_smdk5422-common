@@ -3,13 +3,13 @@
 MYABSPATH=$(readlink -f "$0")
 PATCHBASE=$(dirname "$MYABSPATH")
 CMBASE=$(readlink -f "$PATCHBASE/../../../../")
-
-cd "$CMBASE/bootable/recovery"
-if git remote -v | grep omnirom; then
-    TWRP=true
-else
-    TWRP=false
-fi
+#
+#/cd "$CMBASE/bootable/recovery"
+#if git remote -v | grep omnirom; then
+ #   TWRP=true
+#else
+#    TWRP=false
+#fi
 
 for i in $(find "$PATCHBASE"/* -type d); do
     PATCHNAME=$(basename "$i")

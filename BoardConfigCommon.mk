@@ -19,7 +19,7 @@
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
 #
-
+LOCAL_PATH := device/samsung/k3gxx
 BOARD_VENDOR := samsung
 
 # Architecture
@@ -43,19 +43,24 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/smdk5422-common/include
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/k3gxx/mkdtbhbootimg.mk
+BOARD_CUSTOM_MKBOOTIMG := mkdtbhbootimg
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000 --tags_offset 0x10000100
+BOARD_MKBOOTIMG_ARGS += --dt_dir $(OUT)/obj/KERNEL_OBJ/arch/arm/boot/dts/
+TARGET_KERNEL_CONFIG := exynos5422-k3g_00_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos5422
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SOC := exynos5422
 
 # Audio
-#BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
+BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 # Use stock HAL
-TARGET_EXYNOS3_AUDIO_FROM_SOURCE := true
+TARGET_EXYNOS5_AUDIO_FROM_SOURCE := fase
 # Lollipop Audio HAL is incompatible with Android M (see http://review.cyanogenmod.org/#/c/121831/)
-#TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
+TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true

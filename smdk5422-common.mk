@@ -30,14 +30,14 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.universal5422
 
 # needed by open-source audio-hal
-PRODUCT_PACKAGES += \
-    mixer_paths.xml
+#PRODUCT_PACKAGES += \
+#    mixer_paths.xml
 
 # needed by stock audio-hal
-#PRODUCT_PACKAGES += \
-#    audio.vendor.universal54 \
-#    default_gain.conf \
-#    tinyucm.conf
+PRODUCT_PACKAGES += \
+    audio.vendor.universal5422 \
+    default_gain.conf \
+    tinyucm.conf
 
 # HW composer
 PRODUCT_PACKAGES += \

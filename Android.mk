@@ -13,11 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter gardalte kminilte degaslte ,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),k3gxx)
+
+include $(CLEAR_VARS)
+
+ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
+
+#$(shell mkdir -p $(OUT_DIR_COMMON_BASE)/cm13/target/product/$(TARGET_DEVICE)/obj/KERNEL_OBJ)
+#$(shell cp -p $(TOP)/kernel/samsung/exynos5422/arch/arm/configs/clean $(OUT_DIR_COMMON_BASE)/cm13/target/product/$(TARGET_DEVICE)/obj/KERNEL_OBJ/.config)
 
 endif

@@ -14,11 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_EXYNOS5_AUDIO_FROM_SOURCE),true)
-audio_dirs := source
-else
+
 audio_dirs := wrapper
-endif
 
 include $(call all-named-subdir-makefiles,$(audio_dirs))
 

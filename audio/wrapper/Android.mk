@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-PROPRIETARY_PATH := ../../../../../vendor/samsung/$(TARGET_DEVICE)/proprietary
+PROPRIETARY_PATH := /home/afshin/android/vendor/samsung/$(TARGET_DEVICE)/proprietary
 CONFIG_PATH := ../config
 
 
@@ -38,10 +38,10 @@ include $(BUILD_SHARED_LIBRARY)
 # Stock Audio HAL
 include $(CLEAR_VARS)
 
-LOCAL_MODULE		:= audio.vendor.universal3470
+LOCAL_MODULE		:= audio.vendor.universal5422
 LOCAL_MODULE_TAGS	:= optional
 LOCAL_MODULE_SUFFIX 	:= .so
-LOCAL_SRC_FILES		:= $(PROPRIETARY_PATH)/lib/hw/audio.primary.universal3470.so
+LOCAL_SRC_FILES		:= $(PROPRIETARY_PATH)/lib/hw/audio.primary.universal5422.so
 LOCAL_MODULE_CLASS 	:= SHARED_LIBRARIES
 LOCAL_MODULE_PATH	:= $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
